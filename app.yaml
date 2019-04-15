@@ -1,0 +1,10 @@
+
+service: flasktest # The service name (example: visualizationapi)
+runtime: python
+env: flex # for Google Cloud Flexible App Engine
+
+# the application is at main.py
+entrypoint: gunicorn -b :$PORT main:app
+
+runtime_config:
+  python_version: 3 # enter your Python version BASE ONLY here. Enter 2 for 2.7.9 or 3 for 3.6.4
